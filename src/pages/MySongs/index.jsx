@@ -24,8 +24,12 @@ const MySongs = () => {
     navigation.navigate('FavoriteSongs')
   }
 
-  function handleNavigateBack() {
-    navigation.goBack()
+  function handlePlayer() {
+    navigation.navigate('Player')
+  }
+
+  function handleGoHome() {
+    navigation.navigate("Home")
   }
 
   return (
@@ -50,21 +54,21 @@ const MySongs = () => {
             horizontal={true}
           >
             <View style={{ width: 200, height: 250, marginRight: 20 }}>
-              <Image style={{ width: 200, height: 200, borderRadius: 10 }} source={require('../../assets/covers/tre.jpg')} />
-              <Text style={{ textAlign: 'center', fontFamily: 'OpenSans_700Bold', color: '#FFF', fontSize: 16, marginTop: 5 }}>X-Kid</Text>
-              <Text style={{ textAlign: 'center', fontFamily: 'OpenSans_400Regular', color: 'rgba(165, 192, 255, 0.7)', fontSize: 10, marginTop: 2 }}>GREEN DAY</Text>
+              <Image style={{ width: 200, height: 200, borderRadius: 10 }} source={require('../../assets/covers/daniCalifornia.jpg')} />
+              <Text style={{ textAlign: 'center', fontFamily: 'OpenSans_700Bold', color: '#FFF', fontSize: 16, marginTop: 5 }}>Dani California</Text>
+              <Text style={{ textAlign: 'center', fontFamily: 'OpenSans_400Regular', color: 'rgba(165, 192, 255, 0.7)', fontSize: 10, marginTop: 2 }}>RED HOT CHILLI PEPPERS</Text>
             </View>
 
             <View style={{ width: 200, height: 250, marginRight: 20 }}>
-              <Image style={{ width: 200, height: 200, borderRadius: 10 }} source={require('../../assets/covers/nightmare.jpeg')} />
-              <Text style={{ textAlign: 'center', fontFamily: 'OpenSans_700Bold', color: '#FFF', fontSize: 16, marginTop: 5 }}>So Far Away</Text>
-              <Text style={{ textAlign: 'center', fontFamily: 'OpenSans_400Regular', color: 'rgba(165, 192, 255, 0.7)', fontSize: 10, marginTop: 2 }}>AVENGED SEVENFOLD</Text>
+              <Image style={{ width: 200, height: 200, borderRadius: 10 }} source={require('../../assets/covers/wonderwall.jpg')} />
+              <Text style={{ textAlign: 'center', fontFamily: 'OpenSans_700Bold', color: '#FFF', fontSize: 16, marginTop: 5 }}>Wonderwall</Text>
+              <Text style={{ textAlign: 'center', fontFamily: 'OpenSans_400Regular', color: 'rgba(165, 192, 255, 0.7)', fontSize: 10, marginTop: 2 }}>OASIS</Text>
             </View>
 
             <View style={{ width: 200, height: 250, marginRight: 20 }}>
-              <Image style={{ width: 200, height: 200, borderRadius: 10 }} source={require('../../assets/covers/megadeth1.png')} />
-              <Text style={{ textAlign: 'center', fontFamily: 'OpenSans_700Bold', color: '#FFF', fontSize: 16, marginTop: 5 }}>Dystopia</Text>
-              <Text style={{ textAlign: 'center', fontFamily: 'OpenSans_400Regular', color: 'rgba(165, 192, 255, 0.7)', fontSize: 10, marginTop: 2 }}>MEGADETH</Text>
+              <Image style={{ width: 200, height: 200, borderRadius: 10 }} source={require('../../assets/covers/livin.jpg')} />
+              <Text style={{ textAlign: 'center', fontFamily: 'OpenSans_700Bold', color: '#FFF', fontSize: 16, marginTop: 5 }}>Livin' On a Prayer</Text>
+              <Text style={{ textAlign: 'center', fontFamily: 'OpenSans_400Regular', color: 'rgba(165, 192, 255, 0.7)', fontSize: 10, marginTop: 2 }}>BON JOVI</Text>
             </View>
 
           </ScrollView>
@@ -95,33 +99,13 @@ const MySongs = () => {
 
           </ScrollView>
 
-
-          {/* 
-        <View style={styles.outContainer}>
-          <View style={styles.itemsContainer}>
-            <ScrollView
-              contentContainerStyle={{ paddingHorizontal: 20 }}>
-
-
-              <TouchableOpacity
-
-                onPress={() => handleGoQRCode()}>
-                <View style={styles.out}>
-                  <View style={styles.line}>
-                    <Text style={styles.text}>Nome</Text>
-                  </View>
-                </View>
-              </TouchableOpacity>
-
-
-            </ScrollView>
-          </View>
-        </View> */}
         </View>
       </ScrollView>
       <View style={styles.footer}>
         <View style={{ width: '50%' }}>
-          <Text style={{ textAlign: 'center', fontFamily: 'OpenSans_400Regular', fontSize: 12 }}>Home</Text>
+          <TouchableOpacity onPress={handleGoHome}>
+            <Text style={{ textAlign: 'center', fontFamily: 'OpenSans_400Regular', fontSize: 12 }}>Home</Text>
+          </TouchableOpacity>
         </View>
 
 
@@ -133,16 +117,18 @@ const MySongs = () => {
         </View>
 
         <View style={{ width: '100%', height: 80, position: 'absolute', top: -30, display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-          <View style={{
-            display: 'flex', justifyContent: 'center', alignItems: "center",
-            backgroundColor: '#030303', borderRadius: 50, width: 100, height: 100, shadowColor: "#323030", shadowOffset: { width: -3, height: 0 },
-            shadowOpacity: 1,
-            shadowRadius: 10,
-            elevation: 5
-          }}>
-            <Image source={require('../../assets/logo.png')}
-              style={{ width: 50, height: 50 }} />
-          </View>
+          <TouchableOpacity onPress={handlePlayer}>
+            <View style={{
+              display: 'flex', justifyContent: 'center', alignItems: "center",
+              backgroundColor: '#030303', borderRadius: 50, width: 100, height: 100, shadowColor: "#323030", shadowOffset: { width: -3, height: 0 },
+              shadowOpacity: 1,
+              shadowRadius: 10,
+              elevation: 5
+            }}>
+              <Image source={require('../../assets/logo.png')}
+                style={{ width: 50, height: 50 }} />
+            </View>
+          </TouchableOpacity>
         </View>
       </View>
     </>

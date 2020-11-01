@@ -8,6 +8,7 @@ import Welcome from './src/pages/Welcome'
 import MySongs from './src/pages/MySongs'
 import CameraScreen from './src/pages/Camera'
 import FavoriteSongs from './src/pages/FavoriteSongs'
+import Player from './src/pages/Player'
 
 
 const AppStack = createStackNavigator()
@@ -23,6 +24,7 @@ const Routes = () => {
         <AppStack.Screen name="MySongs" component={MySongs} />
         <AppStack.Screen name="Camera" component={CameraScreen} />
         <AppStack.Screen name="FavoriteSongs" component={FavoriteSongs} />
+        <AppStack.Screen name="Player" component={Player} />
 
       </AppStack.Navigator>
     </NavigationContainer>

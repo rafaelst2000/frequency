@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import {
   View, Text, StyleSheet,
   Image, KeyboardAvoidingView, Platform
@@ -6,12 +6,31 @@ import {
 import { RectButton } from 'react-native-gesture-handler'
 import { useNavigation } from '@react-navigation/native'
 import { Feather } from '@expo/vector-icons'
+import { Camera } from 'expo-camera'
 
 const Welcome = () => {
   const navigation = useNavigation()
+  const camRef = useRef(null)
+  const [type, setType] = useState(Camera.Constants.Type.back)
+  const [hasPermission, setHasPermission] = useState(null)
 
   async function handleNavigateToSongs() {
     navigation.navigate('MySongs')
+  }
+
+  useEffect(() => {
+    (async () => {
+      const { status } = await Camera.requestPermissionsAsync();
+      setHasPermission(status === 'granted');
+    })();
+  }, []);
+
+  if (hasPermission === null) {
+    return <View />
+  }
+
+  if (hasPermission === false) {
+    return <Text> Acesso negado! </Text>
   }
 
   return (
