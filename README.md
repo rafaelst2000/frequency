@@ -27,9 +27,8 @@ Projeto desenvolvido durante a Hackathon CodeStage da **[Sony Music][sony_site]*
 - **[Priscylla Boente][priscylla]** - UX Designer
 - **[Rafael Trevisan][rafael]** - Desenvolvedor Frontend
 
-## **:rocket: Objetivo**
-
-
+## **:rocket: Sobre**
+Aplicação desenvolvida durante o Hackathon CodeStage 2020 - Frequency: solução data driven de curadoria musical baseada no reconhecimento biométrico facial e de voz. Desenvolvido pela equipe 41 do Hackathon CodeStage 2020.
 
 ## **:computer: Tecnologias**
   
