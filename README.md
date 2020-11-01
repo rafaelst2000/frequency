@@ -54,6 +54,12 @@ Projeto desenvolvido durante a Hackathon CodeStage da **[Sony Music][sony_site]*
 > 5. Escaneie o QR Code na tela do seu computador
 > 6. Enjoy!
 
+### **Ou faça o [Download][link] do nosso aplicativo! (Somente Android)** 
+> 1. clique no link de download
+> 2. instale o apk baixado
+> 3. Enjoy!
+
+
 
 <!-- Website Links -->
 
@@ -62,6 +68,8 @@ Projeto desenvolvido durante a Hackathon CodeStage da **[Sony Music][sony_site]*
 [paulo]: https://www.linkedin.com/in/paulovitorsoares/
 [priscylla]: https://www.linkedin.com/in/priscyllaboente/
 [rafael]: https://www.linkedin.com/in/rafaelst2000/
+
+[link]: https://exp-shell-app-assets.s3.us-west-1.amazonaws.com/android/%40rafaelst2000/frequency-f0b9f3b06da544d2862823b7262822dc-signed.apk
 
 [shawee_site]: https://shawee.io/pt/
 
