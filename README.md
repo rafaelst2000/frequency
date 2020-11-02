@@ -33,7 +33,7 @@ Aplicação desenvolvida durante o Hackathon CodeStage 2020 - Frequency: soluç�
 ## **:computer: Tecnologias**
   
   #### **Aplicativo: React-Native + Javascript**
-  
+  - **Google Vision AI**
   - **Expo**
   - **Expo Camera**
   - **React-Navigation**
